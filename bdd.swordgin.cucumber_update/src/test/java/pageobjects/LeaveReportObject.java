@@ -55,12 +55,12 @@ public class LeaveReportObject {
 		LeaveDetails.click();
 	}
 	public void leaveInput () {
-		date_fromDate.click();
-		ldriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		datepicker_fromDate.click();
-		date_toDate.click();
-		ldriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		datepicker_toDate.click();
+//		date_fromDate.click();
+//		ldriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//		datepicker_fromDate.click();
+//		date_toDate.click();
+//		ldriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//		datepicker_toDate.click();
 		button_Search.click();
 	}
 

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 3, 2023 10:46:12 AM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 10, 2023 10:27:26 AM</span></a>
 </li>
 </ul>
 </div>
@@ -79,7 +79,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@CreateProject</a><a class="dropdown-item" href="#">@Feedback</a><a class="dropdown-item" href="#">@2smoke</a><a class="dropdown-item" href="#">@Announcement</a><a class="dropdown-item" href="#">@AddEmployee</a><a class="dropdown-item" href="#">@1Login</a><a class="dropdown-item" href="#">@SelfReport</a><a class="dropdown-item" href="#">@Designation</a><a class="dropdown-item" href="#">@Report</a>
+<a class="dropdown-item" href="#">@1Login</a><a class="dropdown-item" href="#">@CreateProject</a><a class="dropdown-item" href="#">@AddEmployee</a><a class="dropdown-item" href="#">@LeaveReport</a><a class="dropdown-item" href="#">@SelfReport</a><a class="dropdown-item" href="#">@Report</a><a class="dropdown-item" href="#">@Designation</a><a class="dropdown-item" href="#">@2smoke</a><a class="dropdown-item" href="#">@Feedback</a><a class="dropdown-item" href="#">@Announcement</a>
 </ul>
 </li>
 </ul>
@@ -92,7 +92,7 @@
           <div class="test-detail">
             <p class="name">Regression Test</p>
             <p class="text-sm">
-              <span>10:46:12 AM</span> / <span>34:50:230</span>
+              <span>10:27:28 AM</span> / <span>34:53:682</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -101,9 +101,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Regression Test</h5>
-<span class='badge badge-success'>01.03.2023 10:46:12</span>
-<span class='badge badge-danger'>01.03.2023 10:51:03</span>
-<span class='badge badge-default'>34:50:230</span>
+<span class='badge badge-success'>01.10.2023 10:27:28</span>
+<span class='badge badge-danger'>01.10.2023 10:32:22</span>
+<span class='badge badge-default'>34:53:682</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -608,7 +608,83 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="95"><span class="badge log pass-bg mr-2">Pass</span>Self Report</div>
+        <div class="node" id="95"><span class="badge log pass-bg mr-2">Pass</span>Leave Report</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.Steps.launch_chrome_browser()">
+                <span>Given Launch chrome browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.Steps.open_u_rl(java.lang.String)">
+                <span>When Open URl "https://templetravel.in/hrm-sword/"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.Steps.enter_username_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>And Enter Username as "raviramu@swordgroup.in" and Password as "Asdf123$"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.Steps.click_login_button()">
+                <span>And Click Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.Steps.the_page_tile_should_display_or(java.lang.String)">
+                <span>Then The Page Tile should display "Dashboard"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.Steps.click_leave_report()">
+                <span>When Click Leave Report</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.Steps.click_leave_record()">
+                <span>And Click Leave Record</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.Steps.read_leave_record()">
+                <span>And read leave record</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.Steps.check_the_conformation_message_in_leave_report_as(java.lang.String)">
+                <span>Then check the conformation message in leave report as "LEAVE DETAIL RECORD"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.Steps.click_leave_details()">
+                <span>And Click Leave Details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.Steps.read_leave_details()">
+                <span>And read leave Details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.Steps.check_the_conformation_message_in_leave_report_as(java.lang.String)">
+                <span>Then check the conformation message in leave report as "YEAR LEAVE DETAIL REPORT"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.Steps.close_browser()">
+                <span>And Close browser</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="109"><span class="badge log pass-bg mr-2">Pass</span>Self Report</div>
       </div>
     </div>
         <div class="collapse">
@@ -684,7 +760,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="109"><span class="badge log pass-bg mr-2">Pass</span>Report</div>
+        <div class="node" id="123"><span class="badge log pass-bg mr-2">Pass</span>Report</div>
       </div>
     </div>
         <div class="collapse">
@@ -850,14 +926,14 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="141"
+        <li class="test-item"  status="pass" test-id="155"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Smoke Test</p>
             <p class="text-sm">
-              <span>10:51:03 AM</span> / <span>31:23:559</span>
+              <span>10:32:22 AM</span> / <span>31:19:801</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -866,10 +942,10 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Smoke Test</h5>
-<span class='badge badge-success'>01.03.2023 10:51:03</span>
-<span class='badge badge-danger'>01.03.2023 10:52:26</span>
-<span class='badge badge-default'>31:23:559</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=141</span>
+<span class='badge badge-success'>01.10.2023 10:32:22</span>
+<span class='badge badge-danger'>01.10.2023 10:33:41</span>
+<span class='badge badge-default'>31:19:801</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=155</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
 </div>
@@ -878,7 +954,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="142"><span class="badge log pass-bg mr-2">Pass</span>Login to HRMS with valid credentials</div>
+        <div class="node" id="156"><span class="badge log pass-bg mr-2">Pass</span>Login to HRMS with valid credentials</div>
       </div>
     </div>
         <div class="collapse">
@@ -924,7 +1000,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="150"><span class="badge log pass-bg mr-2">Pass</span>Login to HRMS, cheking with each Menu/Submenu and Checking with its Title</div>
+        <div class="node" id="164"><span class="badge log pass-bg mr-2">Pass</span>Login to HRMS, cheking with each Menu/Submenu and Checking with its Title</div>
       </div>
     </div>
         <div class="collapse">
@@ -1378,10 +1454,46 @@
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">9</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">10</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@1Login</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@1Login</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:32:22 AM</td>
+<td>
+<a href="#" class="linked" test-id='155' id='156'>Login to HRMS with valid credentials</a>
+<div class="">
+<span class="badge badge-default">Smoke Test.Login to HRMS with valid credentials</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
@@ -1406,119 +1518,11 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:47:38 AM</td>
+<td>10:28:57 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='49'>Project Menu --> Create Project</a>
 <div class="">
 <span class="badge badge-default">Regression Test.Project Menu --> Create Project</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@Feedback</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@Feedback</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:49:05 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='84'>Feedback</a>
-<div class="">
-<span class="badge badge-default">Regression Test.Feedback</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@2smoke</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@2smoke</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:51:21 AM</td>
-<td>
-<a href="#" class="linked" test-id='141' id='150'>Login to HRMS, cheking with each Menu/Submenu and Checking with its Title</a>
-<div class="">
-<span class="badge badge-default">Smoke Test.Login to HRMS, cheking with each Menu/Submenu and Checking with its Title</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@Announcement</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@Announcement</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:48:29 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='69'>Announcement menu</a>
-<div class="">
-<span class="badge badge-default">Regression Test.Announcement menu</span>
 </div>
 </td>
 </tr>
@@ -1550,7 +1554,7 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:46:47 AM</td>
+<td>10:28:09 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='29'>Employee Menu --> Add Employee</a>
 <div class="">
@@ -1567,12 +1571,12 @@
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@1Login</p>
+<p class="name">@LeaveReport</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@1Login</h4>
+<h4>@LeaveReport</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -1586,11 +1590,11 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:51:03 AM</td>
+<td>10:30:40 AM</td>
 <td>
-<a href="#" class="linked" test-id='141' id='142'>Login to HRMS with valid credentials</a>
+<a href="#" class="linked" test-id='1' id='95'>Leave Report</a>
 <div class="">
-<span class="badge badge-default">Smoke Test.Login to HRMS with valid credentials</span>
+<span class="badge badge-default">Regression Test.Leave Report</span>
 </div>
 </td>
 </tr>
@@ -1622,47 +1626,11 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:49:30 AM</td>
+<td>10:31:09 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='95'>Self Report</a>
+<a href="#" class="linked" test-id='1' id='109'>Self Report</a>
 <div class="">
 <span class="badge badge-default">Regression Test.Self Report</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@Designation</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@Designation</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:46:12 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='2'>Employee Menu --> Designation</a>
-<div class="">
-<span class="badge badge-default">Regression Test.Employee Menu --> Designation</span>
 </div>
 </td>
 </tr>
@@ -1694,11 +1662,155 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:50:07 AM</td>
+<td>10:31:40 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='109'>Report</a>
+<a href="#" class="linked" test-id='1' id='123'>Report</a>
 <div class="">
 <span class="badge badge-default">Regression Test.Report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Designation</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Designation</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:27:28 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Employee Menu --> Designation</a>
+<div class="">
+<span class="badge badge-default">Regression Test.Employee Menu --> Designation</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@2smoke</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@2smoke</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:32:37 AM</td>
+<td>
+<a href="#" class="linked" test-id='155' id='164'>Login to HRMS, cheking with each Menu/Submenu and Checking with its Title</a>
+<div class="">
+<span class="badge badge-default">Smoke Test.Login to HRMS, cheking with each Menu/Submenu and Checking with its Title</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Feedback</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Feedback</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:30:17 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='84'>Feedback</a>
+<div class="">
+<span class="badge badge-default">Regression Test.Feedback</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Announcement</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Announcement</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:29:44 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='69'>Announcement menu</a>
+<div class="">
+<span class="badge badge-default">Regression Test.Announcement menu</span>
 </div>
 </td>
 </tr>
@@ -1719,13 +1831,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 3, 2023 10:46:12 AM</h3>
+<h3>Jan 10, 2023 10:27:26 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 3, 2023 10:52:26 AM</h3>
+<h3>Jan 10, 2023 10:33:41 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -1776,7 +1888,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>9</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>10</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -1796,7 +1908,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>225</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>238</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -1815,7 +1927,7 @@
 </div></div>
 <script>
 var timeline = {
-"Regression Test":290.23,"Smoke Test":83.559
+"Regression Test":293.682,"Smoke Test":79.801
 };
 </script>
 <div class="row">
@@ -1825,31 +1937,15 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
+<td>@1Login</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
 <td>@CreateProject</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@Feedback</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@2smoke</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@Announcement</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -1865,7 +1961,7 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@1Login</td>
+<td>@LeaveReport</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -1881,6 +1977,14 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
+<td>@Report</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
 <td>@Designation</td>
 <td>1</td>
 <td>0</td>
@@ -1889,7 +1993,23 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@Report</td>
+<td>@2smoke</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Feedback</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Announcement</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -1910,13 +2030,13 @@ failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 9,
+passChild: 10,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 225,
+passGrandChild: 238,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
