@@ -65,7 +65,7 @@ public class ProjectsObject {
 	
 //	Dropdown
 	
-	@FindBy(xpath = "//select[@name='project_manager']//child::option[5]")
+	@FindBy(xpath = "(//option[@value='27'])[1]")
 	WebElement dropDown_projectManager;
 	
 	@FindBy(xpath = "//select[@name='billing_mode']//child::option[2]")

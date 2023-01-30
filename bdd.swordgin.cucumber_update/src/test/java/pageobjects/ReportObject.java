@@ -53,7 +53,7 @@ public class ReportObject {
 	@FindBy(xpath = "(//div[@class='datepicker--cell datepicker--cell-day -weekend-'][normalize-space()='1'])[1]")
 	WebElement datepicker_From;
 	
-	@FindBy(xpath = "(//div[@class='datepicker--cell datepicker--cell-day'][normalize-space()='30'])[2]")
+	@FindBy(xpath = "(//div[@class='datepicker--cell datepicker--cell-day -current-'][normalize-space()='30'])[2]")
 	WebElement datepicker_To;
 	
 	@FindBy(xpath = "(//input[@id='emp_date'])[1]")
@@ -101,7 +101,7 @@ public class ReportObject {
 	@FindBy(xpath = "(//select[@name='projectid'])[1]")
 	WebElement dropdown_Project;
 	
-	@FindBy(xpath = "//option[normalize-space(text()) = 'Sword Administration']")
+	@FindBy(xpath = "(//option[@value='19'])[1]")
 	WebElement dropdownpicker_Project;
 	
 	@FindBy(xpath = "(//button[normalize-space()='Search'])[1]")

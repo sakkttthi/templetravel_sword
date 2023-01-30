@@ -2,6 +2,7 @@ package pageobjects;
 
 import java.time.Duration;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,13 +17,13 @@ public class SelfReportObject {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
-	@FindBy(xpath = "//body/div[@id='pageWrapper']/div[@class='page-body-wrapper']/div[@class='sidebar-wrapper']/div/nav[@class='sidebar-main']/div[@id='sidebar-menu']/ul[@id='simple-bar']/div[@class='simplebar-wrapper']/div[@class='simplebar-mask']/div[@class='simplebar-offset']/div[@class='simplebar-content-wrapper']/div[@class='simplebar-content']/li[12]/a[1]")
+	@FindBy(xpath = "(//a[@href='#'])[8]")
 	WebElement SelfReportMenu;
 	
-	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/nav[1]/div[2]/ul[1]/div[1]/div[2]/div[1]/div[1]/div[1]/li[12]/ul[1]/li[1]/a[1]")
+	@FindBy(xpath = "(//a[@href='https://templetravel.in/hrm-sword/leave-report-employee'])[1]")
 	WebElement LeaveSummary;
 	
-	@FindBy(xpath = "//*[@id=\"simple-bar\"]/div[1]/div[2]/div/div/div/li[12]/ul/li[2]/a")
+	@FindBy(xpath = "(//a[@href='https://templetravel.in/hrm-sword/atten-report-emp'])[1]")
 	WebElement AttendanceSummary;
 	
 	@FindBy(xpath = "(//input[@name='from_date'])[1]")
@@ -52,8 +53,10 @@ public class SelfReportObject {
 	}
 	
 	public void clickLeaveSummary () {
-		WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(LeaveSummary)).click();
+		((JavascriptExecutor) ldriver).executeScript("arguments[0].scrollIntoView(true);", LeaveSummary); 
+		LeaveSummary.click();
+//		ldriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//		LeaveSummary.click();
 	}
 	
 	public void clickAttendanceSummary () {

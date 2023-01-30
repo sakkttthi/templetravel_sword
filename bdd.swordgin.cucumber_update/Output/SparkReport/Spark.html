@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 10, 2023 10:27:26 AM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 30, 2023 08:39:26 pm</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('category-view')">
@@ -72,6 +77,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,31 +85,31 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@1Login</a><a class="dropdown-item" href="#">@CreateProject</a><a class="dropdown-item" href="#">@AddEmployee</a><a class="dropdown-item" href="#">@LeaveReport</a><a class="dropdown-item" href="#">@SelfReport</a><a class="dropdown-item" href="#">@Report</a><a class="dropdown-item" href="#">@Designation</a><a class="dropdown-item" href="#">@2smoke</a><a class="dropdown-item" href="#">@Feedback</a><a class="dropdown-item" href="#">@Announcement</a>
+<a class="dropdown-item" href="#">@CreateProject</a><a class="dropdown-item" href="#">@Designation</a><a class="dropdown-item" href="#">@LeaveReport</a><a class="dropdown-item" href="#">@Report</a><a class="dropdown-item" href="#">@SelfReport</a><a class="dropdown-item" href="#">@AddEmployee</a><a class="dropdown-item" href="#">@Feedback</a><a class="dropdown-item" href="#">@2smoke</a><a class="dropdown-item" href="#">@Announcement</a><a class="dropdown-item" href="#">@1Login</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Regression Test</p>
             <p class="text-sm">
-              <span>10:27:28 AM</span> / <span>34:53:682</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>20:39:27 pm</span> / <span>33:36:180</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Regression Test</h5>
-<span class='badge badge-success'>01.10.2023 10:27:28</span>
-<span class='badge badge-danger'>01.10.2023 10:32:22</span>
-<span class='badge badge-default'>34:53:682</span>
+<h5 class="test-status text-fail">Regression Test</h5>
+<span class='badge badge-success'>01.30.2023 20:39:27</span>
+<span class='badge badge-danger'>01.30.2023 20:43:03</span>
+<span class='badge badge-default'>33:36:180</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -360,10 +366,10 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="49"><span class="badge log pass-bg mr-2">Pass</span>Project Menu --> Create Project</div>
+        <div class="node" id="49"><span class="badge log fail-bg mr-2">Fail</span>Project Menu --> Create Project</div>
       </div>
     </div>
-        <div class="collapse">
+        <div class="">
           <div class="card-body">
               <div class="step pass-bg" title="stepdefinitions.Steps.launch_chrome_browser()">
                 <span>Given Launch chrome browser</span>
@@ -435,29 +441,60 @@
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.Steps.amend_the_project_in_field()">
+              <div class="step fail-bg" title="stepdefinitions.Steps.amend_the_project_in_field()">
                 <span>And Amend the Project in field</span>
       <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="pageWrapper"]/div[2]/div[2]/div[2]/div/div/div/div/div/form/div[2]/div[1]/div/select/option[4]"}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.3', revision: '4b786a1e430'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3e42640dc419a3a3c41c4e0f2f209a7c, findElement {using=xpath, value=//*[@id="pageWrapper"]/div[2]/div[2]/div[2]/div/div/div/div/div/form/div[2]/div[1]/div/select/option[4]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\sakthi\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:3321}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:3321/devtool..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3e42640dc419a3a3c41c4e0f2f209a7c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at pageobjects.ProjectsObject.editProjectManager(ProjectsObject.java:157)
+	at stepdefinitions.Steps.amend_the_project_in_field(Steps.java:416)
+	at ✽.Amend the Project in field(file:///C:/Users/sakthi/git/templetravel_sword/bdd.swordgin.cucumber_update/./Feature/Regression.feature:86)
+</textarea>
+      
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.Steps.click_search_field_in_project()">
+              <div class="step skip-bg" title="stepdefinitions.Steps.click_search_field_in_project()">
                 <span>When Click Search field in project</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.Steps.enter_edit_project_in_search_field()">
+              <div class="step skip-bg" title="stepdefinitions.Steps.enter_edit_project_in_search_field()">
                 <span>And Enter Edit project in Search field</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.Steps.search_edit_project_should_be_sorted_in_table()">
+              <div class="step skip-bg" title="stepdefinitions.Steps.search_edit_project_should_be_sorted_in_table()">
                 <span>Then Search Edit project should be sorted in table</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.Steps.close_browser()">
+              <div class="step skip-bg" title="stepdefinitions.Steps.close_browser()">
                 <span>And Close browser</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
           </div>
@@ -933,7 +970,7 @@
           <div class="test-detail">
             <p class="name">Smoke Test</p>
             <p class="text-sm">
-              <span>10:32:22 AM</span> / <span>31:19:801</span>
+              <span>20:43:03 pm</span> / <span>31:08:576</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -942,9 +979,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Smoke Test</h5>
-<span class='badge badge-success'>01.10.2023 10:32:22</span>
-<span class='badge badge-danger'>01.10.2023 10:33:41</span>
-<span class='badge badge-default'>31:19:801</span>
+<span class='badge badge-success'>01.30.2023 20:43:03</span>
+<span class='badge badge-danger'>01.30.2023 20:44:12</span>
+<span class='badge badge-default'>31:08:576</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=155</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -1450,7 +1487,59 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view category-view attributes-view">
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:41:01 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='64'>And Amend the Project in field</a>
+<div class="">
+<span class="badge badge-default">Regression Test.Project Menu --> Create Project.And Amend the Project in field</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
@@ -1461,43 +1550,7 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@1Login</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@1Login</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:32:22 AM</td>
-<td>
-<a href="#" class="linked" test-id='155' id='156'>Login to HRMS with valid credentials</a>
-<div class="">
-<span class="badge badge-default">Smoke Test.Login to HRMS with valid credentials</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
 </span>
 <p class="name">@CreateProject</p>
 <p class="duration text-sm">1 tests</p>
@@ -1505,7 +1558,7 @@
 <div class="test-contents d-none">
 <div class="info">
 <h4>@CreateProject</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -1516,157 +1569,13 @@
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:28:57 AM</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:40:40 pm</td>
 <td>
 <a href="#" class="linked" test-id='1' id='49'>Project Menu --> Create Project</a>
 <div class="">
 <span class="badge badge-default">Regression Test.Project Menu --> Create Project</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@AddEmployee</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@AddEmployee</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:28:09 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='29'>Employee Menu --> Add Employee</a>
-<div class="">
-<span class="badge badge-default">Regression Test.Employee Menu --> Add Employee</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@LeaveReport</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@LeaveReport</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:30:40 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='95'>Leave Report</a>
-<div class="">
-<span class="badge badge-default">Regression Test.Leave Report</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@SelfReport</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@SelfReport</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:31:09 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='109'>Self Report</a>
-<div class="">
-<span class="badge badge-default">Regression Test.Self Report</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@Report</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@Report</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:31:40 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='123'>Report</a>
-<div class="">
-<span class="badge badge-default">Regression Test.Report</span>
 </div>
 </td>
 </tr>
@@ -1698,7 +1607,7 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:27:28 AM</td>
+<td>20:39:27 pm</td>
 <td>
 <a href="#" class="linked" test-id='1' id='2'>Employee Menu --> Designation</a>
 <div class="">
@@ -1715,12 +1624,12 @@
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@2smoke</p>
+<p class="name">@LeaveReport</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@2smoke</h4>
+<h4>@LeaveReport</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -1734,11 +1643,119 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:32:37 AM</td>
+<td>20:42:01 pm</td>
 <td>
-<a href="#" class="linked" test-id='155' id='164'>Login to HRMS, cheking with each Menu/Submenu and Checking with its Title</a>
+<a href="#" class="linked" test-id='1' id='95'>Leave Report</a>
 <div class="">
-<span class="badge badge-default">Smoke Test.Login to HRMS, cheking with each Menu/Submenu and Checking with its Title</span>
+<span class="badge badge-default">Regression Test.Leave Report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Report</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Report</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:42:34 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='123'>Report</a>
+<div class="">
+<span class="badge badge-default">Regression Test.Report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@SelfReport</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@SelfReport</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:42:17 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='109'>Self Report</a>
+<div class="">
+<span class="badge badge-default">Regression Test.Self Report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@AddEmployee</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@AddEmployee</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:40:11 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='29'>Employee Menu --> Add Employee</a>
+<div class="">
+<span class="badge badge-default">Regression Test.Employee Menu --> Add Employee</span>
 </div>
 </td>
 </tr>
@@ -1770,11 +1787,47 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:30:17 AM</td>
+<td>20:41:42 pm</td>
 <td>
 <a href="#" class="linked" test-id='1' id='84'>Feedback</a>
 <div class="">
 <span class="badge badge-default">Regression Test.Feedback</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@2smoke</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@2smoke</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:43:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='155' id='164'>Login to HRMS, cheking with each Menu/Submenu and Checking with its Title</a>
+<div class="">
+<span class="badge badge-default">Smoke Test.Login to HRMS, cheking with each Menu/Submenu and Checking with its Title</span>
 </div>
 </td>
 </tr>
@@ -1806,11 +1859,47 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:29:44 AM</td>
+<td>20:41:11 pm</td>
 <td>
 <a href="#" class="linked" test-id='1' id='69'>Announcement menu</a>
 <div class="">
 <span class="badge badge-default">Regression Test.Announcement menu</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@1Login</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@1Login</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:43:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='155' id='156'>Login to HRMS with valid credentials</a>
+<div class="">
+<span class="badge badge-default">Smoke Test.Login to HRMS with valid credentials</span>
 </div>
 </td>
 </tr>
@@ -1831,25 +1920,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 10, 2023 10:27:26 AM</h3>
+<h3>Jan 30, 2023 08:39:26 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 10, 2023 10:33:41 AM</h3>
+<h3>Jan 30, 2023 08:44:12 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>2</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -1865,12 +1954,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>2</b> features passed
+<div><small data-tooltip='50%'>
+<b>1</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='50%'><b>1</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -1888,9 +1977,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>10</b> scenarios passed</small></div>
+<div><small data-tooltip='90%'><b>9</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='10%'><b>1</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -1908,10 +1997,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>238</b> steps passed</small></div>
+<div><small data-tooltip='97%'><b>233</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='0%'><b>1</b> steps failed,
+<b>4</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -1927,7 +2016,7 @@
 </div></div>
 <script>
 var timeline = {
-"Regression Test":293.682,"Smoke Test":79.801
+"Regression Test":216.18,"Smoke Test":68.576
 };
 </script>
 <div class="row">
@@ -1937,23 +2026,15 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@1Login</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
 <td>@CreateProject</td>
+<td>0</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
+<td>0%</td>
 </tr>
 <tr>
-<td>@AddEmployee</td>
+<td>@Designation</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -1969,14 +2050,6 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@SelfReport</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
 <td>@Report</td>
 <td>1</td>
 <td>0</td>
@@ -1985,7 +2058,7 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@Designation</td>
+<td>@SelfReport</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -1993,7 +2066,7 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@2smoke</td>
+<td>@AddEmployee</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -2009,7 +2082,23 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
+<td>@2smoke</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
 <td>@Announcement</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@1Login</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -2025,21 +2114,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 2,
-failParent: 0,
+passParent: 1,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 10,
-failChild: 0,
+passChild: 9,
+failChild: 1,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 238,
-failGrandChild: 0,
+passGrandChild: 233,
+failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 4,
 infoGrandChild: 0,
 eventsCount: 5,
 };

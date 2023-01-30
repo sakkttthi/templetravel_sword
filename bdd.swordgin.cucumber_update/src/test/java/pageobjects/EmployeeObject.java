@@ -147,7 +147,7 @@ public class EmployeeObject {
 	@FindBy(xpath = "//select[@name='role']//child::option[4]")
 	WebElement dropdown_role;
 
-	@FindBy(xpath = "//*[@id=\"emp\"]/div[4]/div[2]/div/select/option[24]")
+	@FindBy(xpath = "/html/body/div[2]/div[2]/div[2]/div[2]/div/div/div/div/div/form/div[4]/div[2]/div/select/option[2]")
 	WebElement dropdown_Designation;
 
 	@FindBy(xpath = "//select[@name='dependency']//child::option[4]")
