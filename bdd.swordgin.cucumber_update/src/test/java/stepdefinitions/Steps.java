@@ -1,11 +1,8 @@
 package stepdefinitions;
 
-import java.time.Duration;
-import java.util.Random;
 
 import org.junit.Assert;
-import org.openqa.selenium.chrome.ChromeDriver;import org.openqa.selenium.support.ui.ExpectedConditions;
-
+import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageobjects.AnnouncementObject;
@@ -23,7 +20,6 @@ import pageobjects.SelfReportObject;
 import pageobjects.TeamAllocationObject;
 
 public class Steps extends Base {
-	
 
 //	Scenario: Login to HRMS with valid credentials
 
@@ -60,11 +56,11 @@ public class Steps extends Base {
 			Assert.assertEquals(Title, driver.getTitle());
 		}
 	}
-	
+
 	@Then("Amend the Employee in field")
 	public void amend_the_employee_in_field() {
 		EO.editFirstNameTextField(ds1);
-		
+
 	}
 
 	@When("Click Logout")
@@ -137,12 +133,12 @@ public class Steps extends Base {
 	public void click_create_project() {
 		PrO.clickCreateProject();
 	}
-	
+
 	@When("enter valid credentials in create project")
 	public void enter_valid_credentials_in_create_project() {
 		PrO.validCredentials(projectRText);
 	}
-	
+
 	@When("Click Add in projects")
 	public void click_add_in_projects() {
 		PrO.clickAddinProjects();
@@ -186,7 +182,7 @@ public class Steps extends Base {
 	public void click_apply_leave() {
 		LMO.clickApplyLeave();
 	}
-	
+
 	@When("Click Leave Summary")
 	public void click_leave_summary() {
 		LMO.clickLeaveSummary();
@@ -199,7 +195,7 @@ public class Steps extends Base {
 
 	@When("Click Approve Leave")
 	public void click_approve_leave() {
-		
+
 		LMO.clickApproveLeave();
 	}
 
@@ -358,41 +354,42 @@ public class Steps extends Base {
 	public void check_the_conformation_message_in_projects_appear_as(String string) {
 		Assert.assertEquals(string, PrO.projetcsAlertMessage());
 	}
-	
+
 	@Then("check the conformation message in announcement appear as {string}")
 	public void check_the_conformation_message_in_announcement_appear_as(String string) {
 		Assert.assertEquals(string, AO.announcementAlertMessage());
 	}
-	
+
 	@Then("check the conformation message in team allocation appear as {string}")
 	public void check_the_conformation_message_in_team_allocation_appear_as(String string) {
 		Assert.assertEquals(string, TAO.teamAllocationAlertMessage());
 	}
-	
+
 	@Then("check the conformation message in holiday master appear as {string}")
 	public void check_the_conformation_message_in_holiday_master_appear_as(String string) {
 		Assert.assertEquals(string, HMO.holidayAlertMessage());
 	}
-	
+
 	@Then("check the conformation message in leave management as {string}")
 	public void check_the_conformation_message_in_leave_management_as(String string) {
 		Assert.assertEquals(string, LMO.leaveManagementAlertMessage());
 	}
-	
+
 	@Then("check the conformation message in feedback as {string}")
 	public void check_the_conformation_message_in_feedback_as(String string) {
 		Assert.assertEquals(string, FBO.feedbackAlertMessage());
 	}
-	
+
 	@Then("check the conformation message in leave report as {string}")
 	public void check_the_conformation_message_in_leave_report_as(String string) {
 		Assert.assertEquals(string, LRO.leaveReportMessage());
 	}
-	
+
 	@When("Click Search field in project")
 	public void click_search_field_in_project() {
 		PrO.clickSearch();
 	}
+
 	@When("Enter project in Search field")
 	public void enter_project_in_search_field() {
 		PrO.enterSearch(projectRText);
@@ -403,19 +400,23 @@ public class Steps extends Base {
 			e.printStackTrace();
 		}
 	}
+
 	@Then("Search project should be sorted in project table")
 	public void search_project_should_be_sorted_in_project_table() {
 		PrO.sortTable(projectRText);
 	}
+
 	@When("Click ActionButton in projects")
 	public void click_action_button_in_projects() {
 		PrO.clickAction();
 	}
+
 	@Then("Amend the Project in field")
 	public void amend_the_project_in_field() {
 		PrO.editProjectManager();
 		PrO.clickUpdate();
 	}
+
 	@When("Enter Edit project in Search field")
 	public void enter_edit_project_in_search_field() {
 		PrO.enterSearch(projectRText);
@@ -426,13 +427,12 @@ public class Steps extends Base {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
 	@Then("Search Edit project should be sorted in table")
 	public void search_edit_project_should_be_sorted_in_table() {
 		PrO.sortTable(projectRText);
 	}
-	
+
 	@When("Click Search field")
 	public void click_search_field() {
 		EO.clickinSeach();
@@ -449,7 +449,7 @@ public class Steps extends Base {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@When("Enter Employee in Search field")
 	public void enter_employee_in_search_field() {
 		EO.enterinSeach(randomEmployee);
@@ -465,24 +465,22 @@ public class Steps extends Base {
 	public void search_designation_should_be_sorted_in_table() {
 		EO.sortTable1(ds1);
 	}
-	
+
 	@Then("Search Employee should be sorted in table")
 	public void search_employee_should_be_sorted_in_table() {
 		EO.sortTable2(randomEmployee);
 	}
-	
+
 	@Then("Search Edit Employee should be sorted in table")
 	public void search_edit_employee_should_be_sorted_in_table() {
 		EO.sortTable2(ds1);
 	}
 
-
-	
 	@When("Click ActionButton in EmployeeMaster")
 	public void click_action_button_in_employee_master() {
 		EO.clickActionButton2();
 	}
-	
+
 //Edit Designation
 	@When("Enter Edit Designation in Search field")
 	public void enter_edit_designation_in_search_field() {
@@ -494,7 +492,7 @@ public class Steps extends Base {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@When("Enter Edit Employee in Search field")
 	public void enter_edit_employee_in_search_field() {
 		EO.enterinSeach(ds1);
@@ -537,10 +535,10 @@ public class Steps extends Base {
 	}
 
 //	Scenario - 4: Add Employee
-	
+
 	@When("entering valid input in all fields")
 	public void entering_valid_input_in_all_fields() {
-		EO.randomStringField(randomEmployeeMail, randomEmployee,randomtxt1,randomNumber,randomlongtext);
+		EO.randomStringField(randomEmployeeMail, randomEmployee, randomtxt1, randomNumber, randomlongtext);
 		EO.dropDown();
 		EO.checkBox();
 		EO.radioButton();
@@ -549,22 +547,23 @@ public class Steps extends Base {
 		EO.phoneNumber(phoneNumber1);
 		EO.uploadImage();
 	}
-	
+
 	@When("click add employee in employee menu")
 	public void click_add_employee_in_employee_menu() {
 		EO.clickAddEmployee();
 	}
-	
+
 	@When("click add in add employee submenu")
 	public void click_add_in_add_employee_submenu() {
 		EO.createEmployee();
 	}
-	
+
 //	Senario7 : Announcement
 	@When("click add announcement")
 	public void click_add_announcement() {
 		AO.clickAddAnnouncement();
 	}
+
 	@When("create announcement")
 	public void create_announcement() {
 		AO.enterTitle(randomtxt1);
@@ -572,33 +571,37 @@ public class Steps extends Base {
 		AO.selectStatusDropdown();
 		AO.clickAdd();
 	}
+
 	@When("search announcement")
 	public void search_announcement() {
 		AO.Search(randomtxt1);
 	}
-	
+
 	@Then("Search announcement should be sorted in table")
 	public void search_announcement_should_be_sorted_in_table() {
 		AO.sortTable(randomtxt1);
 	}
+
 	@When("update announcement")
 	public void update_announcement() {
 		AO.update(randomtxt2);
 	}
-	
+
 //	Senario8 : Holiday Master
-	
+
 	@When("click add holiday")
 	public void click_add_holiday() {
 		HMO.clickAddHoliday();
 	}
+
 	@When("create holiday")
 	public void create_holiday() {
 		HMO.addHolidayIputs(projectRText);
 	}
+
 	@When("search holiday")
 	public void search_holiday() {
-		HMO.searchHoliday(projectRText); 
+		HMO.searchHoliday(projectRText);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -606,84 +609,94 @@ public class Steps extends Base {
 			e.printStackTrace();
 		}
 	}
+
 	@Then("Search holiday should be sorted in table")
 	public void search_holiday_should_be_sorted_in_table() {
-		HMO.sortTable(projectRText); 
+		HMO.sortTable(projectRText);
 	}
+
 	@When("update holiday")
 	public void update_holiday() {
 		HMO.updateHoliday(projectRtext1);
 	}
-	
+
 //	Senario9 : Leave management menu --> Apply leave
 
 	@When("create leave")
 	public void create_leave() {
 		LMO.leaveCredentials("Leave for " + randomtxt1);
 	}
+
 	@When("search leave")
 	public void search_leave() {
 		LMO.Search("Leave for " + randomtxt1);
 	}
+
 	@Then("Search leave should be sorted in table")
 	public void search_leave_should_be_sorted_in_table() {
 		LMO.sortTable("Leave for " + randomtxt1);
 	}
+
 	@When("update leave")
 	public void update_leave() {
 		LMO.updateLeave("Leave for " + randomtxt2);
 	}
-	
+
 //	Senario10 : Leave management menu --> Assign leave
-	
+
 	@When("assign leave")
 	public void assign_leave() {
 		LMO.assignLeaveInputs("s");
 	}
 
 //	Scenario11 : Leave management	--> Approve leave
-	
+
 	@When("click approve")
 	public void click_approve() {
 		LMO.clickApprove();
 	}
+
 	@Then("click reject")
 	public void click_reject() {
 		LMO.clickReject();
 	}
 
 //	Scenario6: Team Allocation
-	
+
 	@When("create team allocation")
 	public void create_team_allocation() {
 		TAO.creatTeamAllocation("t", randomNumber);
 	}
+
 	@When("search team allocation")
 	public void search_team_allocation() {
 		TAO.Search();
 	}
+
 	@Then("Search team allocation should be sorted in table")
 	public void search_team_allocation_should_be_sorted_in_table() {
 		TAO.sortTable();
 	}
+
 	@When("update team allocation")
 	public void update_team_allocation() {
 		TAO.updateTeamAllocation();
 	}
 
 //	Scenario: Feedback
-	
+
 	@When("create feedback")
 	public void create_feedback() {
 		FBO.createFeedback(randomlongtext);
 	}
 
 //	Scenario: Leave Report
-	
+
 	@When("read leave record")
 	public void read_leave_record() {
 		LRO.leaveInput();
 	}
+
 	@Then("read leave Details")
 	public void read_leave_details() {
 		LRO.leaveInput();
@@ -694,10 +707,12 @@ public class Steps extends Base {
 	public void read_leave_summary() {
 		SRO.leaveInput();
 	}
+
 	@Then("check the conformation message in self report as {string}")
 	public void check_the_conformation_message_in_self_report_as(String string) {
 		SRO.leaveReportMessage();
 	}
+
 	@Then("read attendance summary")
 	public void read_attendance_summary() {
 		SRO.leaveInput();
@@ -707,87 +722,127 @@ public class Steps extends Base {
 	public void check_table_is_visible() {
 		SRO.visiblityOfTable();
 	}
-	
+
 //	Scenario: Report
-	
+
 	@When("read revenuse recognition")
 	public void read_revenuse_recognition() {
 		RO.revenueRecognitionInputs();
 	}
+
 	@Then("check table is visible in revenue recognition")
 	public void check_table_is_visible_in_revenue_recognition() {
 		RO.cardVisible1();
 	}
+
 	@Then("check table is visible in leave summary")
 	public void check_table_is_visible_in_leave_summary() {
-		RO.cardVisible1();	
+		RO.cardVisible1();
 	}
+
 	@Then("read attendance summary in report")
 	public void read_attendance_summary_in_report() {
 		RO.attendanceSummaryInput();
 	}
+
 	@Then("check table is visible in attendance summary")
 	public void check_table_is_visible_in_attendance_summary() {
 		RO.cardVisible1();
 	}
-	
+
 	@Then("read leave summary in report")
 	public void read_leave_summary_in_report() {
 		RO.leaveSummaryInput();
 	}
 
-	
-	
 	@Then("read active employees")
 	public void read_active_employees() {
 		RO.activeEmployeeInput();
 	}
-	
+
 	@Then("check table is visible in active employees")
 	public void check_table_is_visible_in_active_employees() {
 		RO.cardVisible1();
 	}
-	
+
 	@Then("read joiners")
 	public void read_joiners() {
 		RO.joinersAndLeaversInput();
 	}
-	
+
 	@Then("check table is visible in joiners")
 	public void check_table_is_visible_in_joiners() {
 		RO.cardVisible1();
 	}
-	
+
 	@Then("read leavers")
 	public void read_leavers() {
 		RO.joinersAndLeaversInput();
 	}
-	
+
 	@Then("check table is visible in leavers")
 	public void check_table_is_visible_in_leavers() {
 		RO.cardVisible1();
 	}
+
 	@Then("read attendance register")
 	public void read_attendance_register() {
 		RO.attendanceRegisterInput();
 	}
-	
+
 	@Then("check table is visible in attendance register")
 	public void check_table_is_visible_in_attendance_register() {
 		RO.cardVisible1();
 	}
-	
+
 	@Then("read team allocation")
 	public void read_team_allocation() {
 		RO.teamAllocationInput();
 	}
+
 	@Then("check table is visible in team allocation")
 	public void check_table_is_visible_in_team_allocation() {
 		RO.cardVisible1();
 	}
 
+	@When("click job position")
+	public void click_job_position() {
+		JPO.clickJob_Position();
+	}
 
+	@When("click consultancy")
+	public void click_consultancy() {
+		CO.consultancy();
+	}
 
+	@When("click consultancy summary")
+	public void click_consultancy_summary() {
+		CO.consultancy_Summary();
+	}
 
-	
+	@When("click new consultancy")
+	public void click_new_consultancy() {
+		CO.consultancy_New();
+	}
+
+	@When("click job")
+	public void click_job() {
+		JO.clickJob();;
+	}
+
+	@When("click  job summary")
+	public void click_job_summary() {
+		JO.clickJob_Summary();
+	}
+
+	@When("click create job")
+	public void click_create_job() {
+		JO.clickJob_Create();
+	}
+
+	@When("click candidates")
+	public void click_candidates() {
+		CDO.candidates();
+	}
+
 }

@@ -50,10 +50,10 @@ public class ReportObject {
 	@FindBy(xpath = "(//input[@id='currentmonth2'])[1]")
 	WebElement date_To;
 	
-	@FindBy(xpath = "(//div[@class='datepicker--cell datepicker--cell-day -weekend-'][normalize-space()='1'])[1]")
+	@FindBy(xpath = "(//div[@class='datepicker--cell datepicker--cell-day'][normalize-space()='1'])[1]")
 	WebElement datepicker_From;
 	
-	@FindBy(xpath = "(//div[@class='datepicker--cell datepicker--cell-day -current-'][normalize-space()='30'])[2]")
+	@FindBy(xpath = "(//div[@class='datepicker--cell datepicker--cell-day'][normalize-space()='28'])[2]")
 	WebElement datepicker_To;
 	
 	@FindBy(xpath = "(//input[@id='emp_date'])[1]")

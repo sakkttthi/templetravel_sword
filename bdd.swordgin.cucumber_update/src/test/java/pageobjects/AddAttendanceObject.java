@@ -15,6 +15,7 @@ public class AddAttendanceObject {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
+	
 	@FindBy(id = "attendance_picker")
 	WebElement Date;
 	

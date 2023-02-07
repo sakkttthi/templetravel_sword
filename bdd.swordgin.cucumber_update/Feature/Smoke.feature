@@ -99,6 +99,21 @@ Feature: Smoke Test
      When Click Submit Feedback
      Then The Page Tile should display "Give Your Feedback" 
      And Close browser
+     When click job position
+     Then The Page Tile should display "Job Position" 
+     When click consultancy
+     And click consultancy summary
+     Then The Page Tile should display "Consultancy" 
+     When click new consultancy
+     Then The Page Tile should display "Add Consultancy" 
+     When click job
+     And click  job summary
+      Then The Page Tile should display "Jobs" 
+     When click create job
+      Then The Page Tile should display "Add Job" 
+      When click candidates
+   		 Then The Page Tile should display "Candidates" 
+      
      
      
      

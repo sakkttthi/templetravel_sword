@@ -11,10 +11,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pageobjects.AddAttendanceObject;
 import pageobjects.AnnouncementObject;
 import pageobjects.AttendanceObject;
+import pageobjects.CandidatesObject;
+import pageobjects.ConsultancyObject;
 import pageobjects.EmployeeObject;
 import pageobjects.EntitlementObjects;
 import pageobjects.FeedbackObjects;
 import pageobjects.HolidayMasterObject;
+import pageobjects.JobObject;
+import pageobjects.JobPositionObject;
 import pageobjects.LeaveManagementObject;
 import pageobjects.LeaveReportObject;
 import pageobjects.LoginPageObjects;
@@ -39,6 +43,10 @@ public class Base {
 	LeaveReportObject LRO;
 	FeedbackObjects FBO;
 	AddAttendanceObject AAO;
+	JobPositionObject JPO;
+	ConsultancyObject CO;
+	JobObject JO;
+	CandidatesObject CDO;
 	
 	public String ds1 = RandomStringUtils.randomAlphabetic(5);
 	String ds2 = RandomStringUtils.randomAlphabetic(5);
