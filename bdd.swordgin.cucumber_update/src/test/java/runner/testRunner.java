@@ -11,8 +11,8 @@ import io.cucumber.junit.CucumberOptions;
 	features = ".//Feature",
 	glue = "stepdefinitions",
 	dryRun = false,
-	tags = ("@ASmoke"),
-//	tags = ("@1Login or @2smoke or @Designation or @AddEmployee or @CreateProject or @Announcement or @Feedback or @SelfReport or @Report or @LeaveReport" ),
+	tags = ("@HRJobPosition"),
+//	tags = ("@1Login or @2smoke or @Designation or @AddEmployee or @CreateProject or @Announcement or @Feedback or @SelfReport or @Report or @LeaveReport or @HRJobPosition" ),
 	
 	plugin = {"pretty","html:test-output"}
 //	plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}

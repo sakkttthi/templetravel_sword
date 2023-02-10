@@ -98,7 +98,6 @@ Feature: Smoke Test
      Then The Page Tile should display "Feedback" 
      When Click Submit Feedback
      Then The Page Tile should display "Give Your Feedback" 
-     And Close browser
      When click job position
      Then The Page Tile should display "Job Position" 
      When click consultancy
@@ -113,7 +112,7 @@ Feature: Smoke Test
       Then The Page Tile should display "Add Job" 
       When click candidates
    		 Then The Page Tile should display "Candidates" 
-      
+        And Close browser
      
      
      

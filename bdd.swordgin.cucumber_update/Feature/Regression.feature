@@ -16,7 +16,7 @@ Feature: Regression Test
     When Click Designation field
     And Enter Designation in field
     And Click Add
-    Then check the conformation message appear as "Designation Created Successfully."
+    Then check the confirmation message appear as "Designation Created Successfully."
     When Click Search field
     And Enter Designation in Search field 
     #Search the newly created designation
@@ -48,7 +48,7 @@ Feature: Regression Test
     And click add employee in employee menu
     And entering valid input in all fields
     And click add in add employee submenu
-    Then check the conformation message appear as "Employee Created Successfully"
+    Then check the confirmation message appear as "Employee Created Successfully"
     When Click Search field
     And Enter Employee in Search field 
     #Search the newly created designation
@@ -75,7 +75,7 @@ Feature: Regression Test
    	And Click Create Project
    	When enter valid credentials in create project
    	And Click Add in projects 
-   	Then check the conformation message in projects appear as "Project Created Successfully."
+   	Then check the confirmation message in projects appear as "Project Created Successfully."
    	When Click Search field in project
     And Enter project in Search field 
     #Search the newly created designation
@@ -100,11 +100,11 @@ Feature: Regression Test
    When Click Team Allocation
    And Click Create Team Allocation
    And create team allocation
-   Then check the conformation message in team allocation appear as "Team Allocation Created Successfully"
+   Then check the confirmation message in team allocation appear as "Team Allocation Created Successfully"
    When search team allocation
    Then Search team allocation should be sorted in table 
    When update team allocation
-   Then check the conformation message in team allocation appear as "Team Allocation Updated Successfully."
+   Then check the confirmation message in team allocation appear as "Team Allocation Updated Successfully."
    And Close browser
    
    @Announcement
@@ -117,11 +117,11 @@ Feature: Regression Test
    When Click Announcement
    And click add announcement
    And create announcement
-   Then check the conformation message in announcement appear as "Announcement Created Successfully."
+   Then check the confirmation message in announcement appear as "Announcement Created Successfully."
    When search announcement
    Then Search announcement should be sorted in table 
    When update announcement
-   Then check the conformation message in announcement appear as "Announcement Updated Successfully."
+   Then check the confirmation message in announcement appear as "Announcement Updated Successfully."
    And Close browser
    	
    	@HolidayMaster
@@ -134,11 +134,11 @@ Feature: Regression Test
    When Click Holiday Master
    And click add holiday
    And create holiday
-   Then check the conformation message in holiday master appear as "Holiday Created Successfully"
+   Then check the confirmation message in holiday master appear as "Holiday Created Successfully"
    When search holiday
    Then Search holiday should be sorted in table 
    When update holiday
-   Then check the conformation message in holiday master appear as "Holiday Updated Successfully."
+   Then check the confirmation message in holiday master appear as "Holiday Updated Successfully."
    And Close browser
    
    @LeaveManagement_ApplyLeave
@@ -151,11 +151,11 @@ Feature: Regression Test
    When Click Leave Management
    And Click Apply Leave
    And create leave
-   Then check the conformation message in leave management as "Leave Applied"
+   Then check the confirmation message in leave management as "Leave Applied"
    When search leave
    Then Search leave should be sorted in table 
    When update leave
-   Then check the conformation message in leave management as "Leave Updated"
+   Then check the confirmation message in leave management as "Leave Updated"
    And Close browser
    	
    	@LeaveManagement_AssignLeave
@@ -168,7 +168,7 @@ Feature: Regression Test
    When Click Leave Management
    And Click Assign Leave
    And assign leave
-   Then check the conformation message in leave management as "Leave Assigned"
+   Then check the confirmation message in leave management as "Leave Assigned"
    	And Close browser
    	
    	@LeaveManagement_ApproveLeave
@@ -181,9 +181,9 @@ Feature: Regression Test
    When Click Leave Management
    And Click Approve Leave
    And click approve
-   Then check the conformation message in leave management as "Leave has been approved"
+   Then check the confirmation message in leave management as "Leave has been approved"
    	And click reject
-   Then check the conformation message in leave management as "Leave has been Rejected"
+   Then check the confirmation message in leave management as "Leave has been Rejected"
    	And Close browser
 
    	@Feedback
@@ -196,7 +196,7 @@ Feature: Regression Test
    When Click Feedback
    And Click Submit Feedback
    And create feedback
-   Then check the conformation message in feedback as "Thank you for submitting Feedback"
+   Then check the confirmation message in feedback as "Thank you for submitting Feedback"
   And Close browser
    	
    		@LeaveReport
@@ -209,10 +209,10 @@ Feature: Regression Test
    When Click Leave Report
    And Click Leave Record
    And read leave record
-   Then check the conformation message in leave report as "LEAVE DETAIL RECORD"
+   Then check the confirmation message in leave report as "LEAVE DETAIL RECORD"
 	 And Click Leave Details
    And read leave Details
-   Then check the conformation message in leave report as "YEAR LEAVE DETAIL REPORT"
+   Then check the confirmation message in leave report as "YEAR LEAVE DETAIL REPORT"
    	And Close browser
    	
    	@SelfReport
@@ -264,6 +264,49 @@ Feature: Regression Test
    And read team allocation
    Then check table is visible in team allocation
    And Close browser  	
+   
+   	@HRJobPosition
+   Scenario: Job position
+   Given Launch chrome browser
+   When Open URl "https://templetravel.in/hrm-sword/"
+   And Enter Username as "raviramu@swordgroup.in" and Password as "Asdf123$" 
+   And Click Login button
+   Then The Page Tile should display "Dashboard"
+   When click job position
+   And add job position
+   #Then check the confirmation message in add job position as "Job Position saved successfully. "
+   When read job position
+   And update job position
+   Then check the confirmation message in update job position as "Job Position Updated Successfully."
+   When click consultancy
+   And click consultancy summary
+   Then The Page Tile should display "Consultancy" 
+   And click add consultancy button
+   And add details in create consultancy
+   Then check the confirmation message in add create consultancy as "Consultancy Created Successfully"
+   When read consultancy
+   And edit consultancy
+   Then check the confirmation message in edit consultancy as "Consultancy Updated Successfully"
+	 When click job
+   And click  job summary
+   Then The Page Tile should display "Jobs" 
+   When click add job button
+   And add job
+   Then check the confirmation message in add job as "Job Created Successfully"
+   When search job
+   And edit job
+   Then check the confirmation message in edit job as "Job Updated Successfully"
+   When add candidate
+   Then check the confirmation message in edit job as "Candidate Created Successfully"
+   When read candidate
+   And edit candidate
+   Then check the confirmation message in edit job as "Candidate Updated Successfully"
+   And Close browser
+   
+    
+   
+   
+   
    	
    	
    	

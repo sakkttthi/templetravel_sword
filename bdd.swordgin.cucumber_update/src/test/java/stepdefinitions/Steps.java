@@ -7,10 +7,14 @@ import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageobjects.AnnouncementObject;
 import pageobjects.AttendanceObject;
+import pageobjects.CandidatesObject;
+import pageobjects.ConsultancyObject;
 import pageobjects.EmployeeObject;
 import pageobjects.EntitlementObjects;
 import pageobjects.FeedbackObjects;
 import pageobjects.HolidayMasterObject;
+import pageobjects.JobObject;
+import pageobjects.JobPositionObject;
 import pageobjects.LeaveManagementObject;
 import pageobjects.LeaveReportObject;
 import pageobjects.LoginPageObjects;
@@ -804,45 +808,162 @@ public class Steps extends Base {
 	public void check_table_is_visible_in_team_allocation() {
 		RO.cardVisible1();
 	}
-
 	@When("click job position")
 	public void click_job_position() {
+		JPO = new JobPositionObject(driver);
+//		driver.findElement(By.xpath("(//a[@href='https://templetravel.in/hrm-sword/job-position'])[1]")).click();
 		JPO.clickJob_Position();
 	}
 
 	@When("click consultancy")
 	public void click_consultancy() {
+		CO = new ConsultancyObject(driver);
+//		driver.findElement(By.xpath("//*[@id=\"simple-bar\"]/div[1]/div[2]/div/div/div/li[16]/a")).click();
 		CO.consultancy();
 	}
 
 	@When("click consultancy summary")
 	public void click_consultancy_summary() {
+//		driver.findElement(By.xpath("//a[normalize-space()='Consultancy Summary']")).click();
 		CO.consultancy_Summary();
 	}
 
 	@When("click new consultancy")
 	public void click_new_consultancy() {
+//		driver.findElement(By.xpath("(//a[normalize-space()='New Consultancy'])[1]")).click();
 		CO.consultancy_New();
 	}
 
 	@When("click job")
 	public void click_job() {
-		JO.clickJob();;
+		JO = new JobObject(driver);
+//		driver.findElement(By.xpath("(//a[@class='sidebar-link sidebar-title'])[12]")).click();
+		JO.clickJob();
 	}
 
 	@When("click  job summary")
 	public void click_job_summary() {
+//		driver.findElement(By.xpath("(//a[normalize-space()='Job Summary'])[1]")).click();
 		JO.clickJob_Summary();
 	}
 
 	@When("click create job")
 	public void click_create_job() {
+//		driver.findElement(By.xpath("(//a[normalize-space()='Create Job'])[1]")).click();
 		JO.clickJob_Create();
 	}
 
 	@When("click candidates")
 	public void click_candidates() {
+		CDO = new CandidatesObject(driver);
+//		driver.findElement(By.xpath("(//a[@href='https://templetravel.in/hrm-sword/candidate'])[1]")).click();
 		CDO.candidates();
 	}
+	
+//	HR Module
+	
+	@When("add job position")
+	public void add_job_position() {
+		JPO.addJob(ds1);
+	}
+	@Then("check the confirmation message in add job position as {string}")
+	public void check_the_confirmation_message_in_add_job_position_as(String string) {
+		Assert.assertEquals(string,JPO.alert());
+	}
+	@When("read job position")
+	public void read_job_position() {
+	   try {
+		JPO.read(ds1);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	}
+	@When("update job position")
+	public void update_job_position() {
+	   JPO.update(ds2);
+	}
+	@Then("check the confirmation message in update job position as {string}")
+	public void check_the_confirmation_message_in_update_job_position_as(String string) {
+		Assert.assertEquals(string, JPO.alert());
+	}
+	@Then("click add consultancy button")
+	public void click_add_consultancy_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@Then("add details in create consultancy")
+	public void add_details_in_create_consultancy() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@Then("check the confirmation message in add create consultancy as {string}")
+	public void check_the_confirmation_message_in_add_create_consultancy_as(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("read consultancy")
+	public void read_consultancy() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("edit consultancy")
+	public void edit_consultancy() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@Then("check the confirmation message in edit consultancy as {string}")
+	public void check_the_confirmation_message_in_edit_consultancy_as(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("click add job button")
+	public void click_add_job_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("add job")
+	public void add_job() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@Then("check the confirmation message in add job as {string}")
+	public void check_the_confirmation_message_in_add_job_as(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("search job")
+	public void search_job() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("edit job")
+	public void edit_job() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@Then("check the confirmation message in edit job as {string}")
+	public void check_the_confirmation_message_in_edit_job_as(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("add candidate")
+	public void add_candidate() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("read candidate")
+	public void read_candidate() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("edit candidate")
+	public void edit_candidate() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
 
 }
+
+

@@ -346,7 +346,7 @@ public class EmployeeObject {
 	
 	public void uploadImage() {
 		String projectpath = System.getProperty("user.dir");
-		upload_profilePhoto.sendKeys(projectpath+"\\TestData\\profilepic.jpg");
+		upload_profilePhoto.sendKeys(projectpath+"\\TestData\\images.png");
 	}
 	
 	public void createEmployee()  {
