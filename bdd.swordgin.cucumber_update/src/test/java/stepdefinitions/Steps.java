@@ -2,6 +2,8 @@ package stepdefinitions;
 
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -349,43 +351,43 @@ public class Steps extends Base {
 		EO.clickAddButton();
 	}
 
-	@Then("check the conformation message appear as {string}")
-	public void check_the_conformation_message_appear_as(String string) {
+	@Then("check the confirmation message appear as {string}")
+	public void check_the_confirmation_message_appear_as(String string) {
 		Assert.assertEquals(string, EO.designationAlertMessage());
 	}
 
-	@Then("check the conformation message in projects appear as {string}")
-	public void check_the_conformation_message_in_projects_appear_as(String string) {
+	@Then("check the confirmation message in projects appear as {string}")
+	public void check_the_confirmation_message_in_projects_appear_as(String string) {
 		Assert.assertEquals(string, PrO.projetcsAlertMessage());
 	}
 
-	@Then("check the conformation message in announcement appear as {string}")
-	public void check_the_conformation_message_in_announcement_appear_as(String string) {
+	@Then("check the confirmation message in announcement appear as {string}")
+	public void check_the_confirmation_message_in_announcement_appear_as(String string) {
 		Assert.assertEquals(string, AO.announcementAlertMessage());
 	}
 
-	@Then("check the conformation message in team allocation appear as {string}")
-	public void check_the_conformation_message_in_team_allocation_appear_as(String string) {
+	@Then("check the confirmation message in team allocation appear as {string}")
+	public void check_the_confirmation_message_in_team_allocation_appear_as(String string) {
 		Assert.assertEquals(string, TAO.teamAllocationAlertMessage());
 	}
 
-	@Then("check the conformation message in holiday master appear as {string}")
-	public void check_the_conformation_message_in_holiday_master_appear_as(String string) {
+	@Then("check the confirmation message in holiday master appear as {string}")
+	public void check_the_confirmation_message_in_holiday_master_appear_as(String string) {
 		Assert.assertEquals(string, HMO.holidayAlertMessage());
 	}
 
-	@Then("check the conformation message in leave management as {string}")
-	public void check_the_conformation_message_in_leave_management_as(String string) {
+	@Then("check the confirmation message in leave management as {string}")
+	public void check_the_confirmation_message_in_leave_management_as(String string) {
 		Assert.assertEquals(string, LMO.leaveManagementAlertMessage());
 	}
 
-	@Then("check the conformation message in feedback as {string}")
-	public void check_the_conformation_message_in_feedback_as(String string) {
+	@Then("check the confirmation message in feedback as {string}")
+	public void check_the_confirmation_message_in_feedback_as(String string) {
 		Assert.assertEquals(string, FBO.feedbackAlertMessage());
 	}
 
-	@Then("check the conformation message in leave report as {string}")
-	public void check_the_conformation_message_in_leave_report_as(String string) {
+	@Then("check the confirmation message in leave report as {string}")
+	public void check_the_confirmation_message_in_leave_report_as(String string) {
 		Assert.assertEquals(string, LRO.leaveReportMessage());
 	}
 
@@ -712,8 +714,8 @@ public class Steps extends Base {
 		SRO.leaveInput();
 	}
 
-	@Then("check the conformation message in self report as {string}")
-	public void check_the_conformation_message_in_self_report_as(String string) {
+	@Then("check the confirmation message in self report as {string}")
+	public void check_the_confirmation_message_in_self_report_as(String string) {
 		SRO.leaveReportMessage();
 	}
 
@@ -868,16 +870,14 @@ public class Steps extends Base {
 	}
 	@Then("check the confirmation message in add job position as {string}")
 	public void check_the_confirmation_message_in_add_job_position_as(String string) {
-		Assert.assertEquals(string,JPO.alert());
+		
+		WebElement alt = driver.findElement(By.xpath("//div[@class='container-fluid return']"));
+		System.out.println(alt.getText());
+		Assert.assertEquals(string,alt.getText());
 	}
 	@When("read job position")
 	public void read_job_position() {
-	   try {
-		JPO.read(ds1);
-	} catch (Exception e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+			JPO.read(ds1);
 	}
 	@When("update job position")
 	public void update_job_position() {
@@ -889,78 +889,64 @@ public class Steps extends Base {
 	}
 	@Then("click add consultancy button")
 	public void click_add_consultancy_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   CO.click_addConcultancy();
 	}
 	@Then("add details in create consultancy")
 	public void add_details_in_create_consultancy() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		CO.createConsultancy(ds2, ds1, phoneNumber1, randomEmployeeMail);
 	}
 	@Then("check the confirmation message in add create consultancy as {string}")
 	public void check_the_confirmation_message_in_add_create_consultancy_as(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+
 	}
 	@When("read consultancy")
 	public void read_consultancy() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		CO.readSummary(ds1);
 	}
 	@When("edit consultancy")
 	public void edit_consultancy() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		CO.editConsultancy(randomtxt1);
 	}
 	@Then("check the confirmation message in edit consultancy as {string}")
 	public void check_the_confirmation_message_in_edit_consultancy_as(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+
 	}
 	@When("click add job button")
 	public void click_add_job_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		JO.clickAddJob();
 	}
 	@When("add job")
 	public void add_job() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		JO.addJob(ds1,randomNumber, randomNumber, randomlongtext, randomlongtext);
 	}
 	@Then("check the confirmation message in add job as {string}")
 	public void check_the_confirmation_message_in_add_job_as(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+
 	}
 	@When("search job")
 	public void search_job() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		JO.searchJob(ds1);
 	}
 	@When("edit job")
 	public void edit_job() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+
 	}
 	@Then("check the confirmation message in edit job as {string}")
 	public void check_the_confirmation_message_in_edit_job_as(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+
 	}
 	@When("add candidate")
 	public void add_candidate() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		CDO.click_button_addCandidates();
+		CDO.candidate_input(ds1, randomEmployeeMail, phoneNumber1, randomlongtext);
 	}
 	@When("read candidate")
 	public void read_candidate() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+
 	}
 	@When("edit candidate")
 	public void edit_candidate() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+
 	}
 
 

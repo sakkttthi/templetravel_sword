@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions;
 //	tags = ("@1Login or @2smoke or @Designation or @AddEmployee or @CreateProject or @Announcement or @Feedback or @SelfReport or @Report or @LeaveReport or @HRJobPosition" ),
 	
 	plugin = {"pretty","html:test-output"}
-//	plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+//	plugin = {"com.aventstackt.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 	)
 
 public class testRunner  {

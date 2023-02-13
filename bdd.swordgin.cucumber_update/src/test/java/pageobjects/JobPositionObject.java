@@ -1,11 +1,19 @@
 package pageobjects;
 
 
+import java.time.Duration;
+
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import junit.framework.Assert;
 
@@ -34,7 +42,7 @@ public class JobPositionObject {
 	@FindBy(xpath = "(//button[normalize-space()='Add'])[1]")
 	WebElement button_add;
 	
-	@FindBy(xpath = "//div[@role='alert']")
+	@FindBy(xpath = "(//div[@role='alert'])[1]")
 	WebElement alert;
 	
 	@FindBy(xpath = "//input[@type='search']")
@@ -43,7 +51,7 @@ public class JobPositionObject {
 	@FindBy(xpath = "//*[@id=\"datatable\"]/tbody/tr[1]/td[2]")
 	WebElement table_first;
 	
-	@FindBy(xpath = "(//a)[63]")
+	@FindBy(how = How.XPATH, using ="//body[1]/div[2]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[4]/a[1]")
 	WebElement button_edit;
 	
 	@FindBy(xpath = "(//button[normalize-space()='Update'])[1]")
@@ -66,16 +74,23 @@ public class JobPositionObject {
 		return alert.getText();
 	}
 	
-	public void read(String str1) throws Exception {
+	@SuppressWarnings("deprecation")
+	public void read(String str1) {
 		field_Search.sendKeys(str1);
-		ldriver.wait(5000);
-		Assert.assertEquals(str1,table_first.getText());
+//		ldriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
+		WebDriverWait waits = new WebDriverWait(ldriver, Duration.ofSeconds(10000));
+		String actual = waits.until(ExpectedConditions.visibilityOf(table_first)).getText();
+		System.out.println(actual);
+		Assert.assertEquals(str1, actual);
 	}
 	
 	public void update(String str) {
-		button_edit.click();
+		WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(2000));
+		wait.until(ExpectedConditions.visibilityOf(button_edit)).click();
+//		button_edit.click();
 		field_JobPosition.sendKeys(str);
-		button_update.click();
+		wait.until(ExpectedConditions.visibilityOf(button_update)).click();
+//		button_update.click();
 	}
 		
 
